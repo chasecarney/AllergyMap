@@ -18,7 +18,7 @@ export class RestaurantService{
 
        return this.http.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+location+'&radius='+range+'&type=restaurant&keyword=gluten-free&key=AIzaSyB_gzFA02Pt-8KHl63aMbP5vSXFsqR8c-o')
                 .toPromise()
-								.then(response => this.parse(response.json()))
+				.then(response => this.parse(response.json()))
                 .catch(error => {
                     console.log(error.text);
                     alert("Oops! There was an error.");
@@ -33,7 +33,7 @@ export class RestaurantService{
 		           rest.push(response.results[i]);
 		       }
 
-		        console.log(rest);
+		       
 		        return rest;
 		    }
 }
