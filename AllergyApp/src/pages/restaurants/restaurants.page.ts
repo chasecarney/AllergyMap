@@ -12,7 +12,16 @@ export class RestaurantsPage {
 	public rest: Restaurant[];
   constructor(public navCtrl: NavController, private service: RestaurantService) {
 
-				this.service.getRestaurant();
+				 this.service.getRestaurant()
+         .then(rest=>{
+           this.rest = rest;
+         });
+
+         console.log(this.rest);
+        
+        
   }
+
+ 
 
 }
