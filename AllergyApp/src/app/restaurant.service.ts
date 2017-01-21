@@ -13,10 +13,10 @@ export class RestaurantService{
 
     getRestaurant() : Promise<Restaurant[]> {
 
-			var range = 5000;
+			var range = 2000;
 			var location = '40.7128,-74.0059';
 
-       return this.http.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=40.7128,-74.0059&radius=1000&type=restaurant&keyword=gluten-free&key=AIzaSyB_gzFA02Pt-8KHl63aMbP5vSXFsqR8c-o')
+       return this.http.get('https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+location+'&radius='+range+'&type=restaurant&keyword=gluten-free&key=AIzaSyB_gzFA02Pt-8KHl63aMbP5vSXFsqR8c-o')
                 .toPromise()
 								.then(response => this.parse(response.json()))
                 .catch(error => {
@@ -30,8 +30,7 @@ export class RestaurantService{
 		       var rest: Restaurant[] = [];
 
 		       for(var i = 0; i < response.results.length; i++ ){
-						 		console.log(response.results[i].name);
-		           rest.push(response.results[i].name);
+		           rest.push(response.results[i]);
 		       }
 
 		        console.log(rest);
