@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { RestaurantsPage } from '../restaurants/restaurants.page';
-import { AllergiesPage } from '../allergies/allergies';
+import { AllergiesPage } from '../allergies/allergies.page';
 
 @Component({
   templateUrl: 'tabs.html'
