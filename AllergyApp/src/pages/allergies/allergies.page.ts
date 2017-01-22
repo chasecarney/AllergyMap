@@ -24,4 +24,17 @@ export class AllergiesPage {
 
   }
 
+  change(allergy: Allergy): void{
+    if(allergy.checked){
+      allergy.checked = false;
+    }
+    else{
+      allergy.checked = true;
+    }
+
+    console.log(this.allergy_list);
+    
+    
+  }
+
 }
