@@ -9,7 +9,7 @@ export class Restaurant{
         this.name = restaurant.name;
         this.vicinity = restaurant.vicinity;
         this.opening_hours.open_now = restaurant.open_now;
-        this.rating = restaurant.rating;
+
     }
 
 

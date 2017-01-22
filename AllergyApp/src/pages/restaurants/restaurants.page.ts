@@ -17,11 +17,10 @@ export class RestaurantsPage {
            this.rest = rest;
          });
 
-         console.log(this.rest);
-        
-        
+				 console.log(rest.rating);
+
   }
 
- 
+
 
 }

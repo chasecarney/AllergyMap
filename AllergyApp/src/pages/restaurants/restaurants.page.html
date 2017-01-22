@@ -7,7 +7,19 @@
 <ion-content padding>
       <ion-list>
         <ion-item *ngFor="let place of rest">
-         
+
+         <h2>{{place.name}}
+				 </h2>
+
+				 <div *ngIf="place.opening_hours.open_now == true">
+					 <h3 style="color: green">Now Open</h3>
+				 </div>
+
+				 <div *ngIf="place.opening_hours.open_now == false">
+					 <h3 style="color: red">Closed</h3>
+				 </div>
+
+				 <p style="color: gray">{{place.vicinity}}</p>
         </ion-item>
 
       </ion-list>
