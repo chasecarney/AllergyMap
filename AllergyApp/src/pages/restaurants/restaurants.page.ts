@@ -17,7 +17,7 @@ export class RestaurantsPage {
            this.rest = rest;
          });
 
-				 console.log(rest.rating);
+
 
   }
 
