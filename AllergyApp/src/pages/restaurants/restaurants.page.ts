@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Restaurant } from '../../app/restaurant'
-import { RestaurantService } from '../../app/restaurant.service'
+import { Restaurant } from '../../app/restaurant';
+import { RestaurantService } from '../../app/restaurant.service';
 import { NavController } from 'ionic-angular';
 
 @Component({
@@ -16,9 +16,6 @@ export class RestaurantsPage {
          .then(rest=>{
            this.rest = rest;
          });
-
-
-
   }
 
 

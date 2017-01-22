@@ -1,26 +1,16 @@
 import { Component } from '@angular/core';
 import { Allergy } from '../../app/allergies';
 import { NavController } from 'ionic-angular';
+import { RestaurantService } from '../../app/restaurant.service';
 
 @Component({
   selector: 'page-allergies',
-  templateUrl: 'allergies.page.html'
+  templateUrl: 'allergies.page.html',
+	providers: [RestaurantService]
 })
 export class AllergiesPage {
-  allergy_list: Allergy[] = [];
-  constructor(public navCtrl: NavController) {
-      this.createList();
-  }
-
-
-  createList(): void{
-      this.allergy_list.push(new Allergy("Gluten"));
-      this.allergy_list.push(new Allergy("Wheat"));
-      this.allergy_list.push(new Allergy("Dairy"));
-      this.allergy_list.push(new Allergy("Peanut"));
-      this.allergy_list.push(new Allergy("Shellfish"));
-      this.allergy_list.push(new Allergy("Tree-Nuts"));
-      this.allergy_list.push(new Allergy("Fruit"));
+  constructor(public navCtrl: NavController, private service: RestaurantService) {
+		this.service.createList();
   }
 
   change(allergy: Allergy): void{
@@ -30,10 +20,6 @@ export class AllergiesPage {
     else{
       allergy.checked = true;
     }
-
-    console.log(this.allergy_list);
-    
-    
   }
 
 

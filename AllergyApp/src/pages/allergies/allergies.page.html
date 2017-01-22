@@ -1,14 +1,12 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Allergies
-    </ion-title>
+    <ion-title style="background-color: rgb(255, 152, 45)"><h3 style="color: white">Allergies</h3></ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-list>
-      <ion-item *ngFor ="let allergy of allergy_list">
+      <ion-item *ngFor ="let allergy of service.allergy_list">
         <ion-label>{{allergy.name}}</ion-label>
         <ion-checkbox color="danger" checked="false" (ionChange) = "change(allergy)"> </ion-checkbox>
       </ion-item>

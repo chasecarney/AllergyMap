@@ -9,8 +9,8 @@ import { AllergiesPage } from '../allergies/allergies.page';
 export class TabsPage {
   // this tells the tabs component which Pages
   // should be each tab's root Page
-  tab1Root: any = RestaurantsPage;
-  tab2Root: any = AllergiesPage;
+  tab1Root: any = AllergiesPage;
+  tab2Root: any = RestaurantsPage;
 
   constructor() {
 
