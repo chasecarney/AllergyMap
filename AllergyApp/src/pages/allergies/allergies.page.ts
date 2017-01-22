@@ -21,7 +21,6 @@ export class AllergiesPage {
       this.allergy_list.push(new Allergy("Shellfish"));
       this.allergy_list.push(new Allergy("Tree-Nuts"));
       this.allergy_list.push(new Allergy("Fruit"));
-
   }
 
   change(allergy: Allergy): void{
@@ -36,5 +35,7 @@ export class AllergiesPage {
     
     
   }
+
+
 
 }
